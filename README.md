@@ -13,13 +13,8 @@ This project provides a Docker-based development environment for creating a ligh
 ## Setup
 
 1. Clone this repository
-2. Run the setup script to create the initial folder structure and files:
-   ```bash
-   chmod +x setup.sh
-   ./setup.sh
-   ```
-3. Configure your device settings in the `.env` file (created by setup.sh)
-4. Start the Docker environment:
+2. Configure your device settings in the `.env` file (created by setup.sh)
+3. Start the Docker environment:
    ```bash
    docker-compose up -d
    ```
