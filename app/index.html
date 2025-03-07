@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenIPC</title>
+    <!-- Bootstrap CSS (from CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="d-flex flex-column min-vh-100">
+        <!-- Header -->
+        <header class="py-2">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center justify-content-center">
+                    <img src="img/openipc-logo.svg" alt="OpenIPC Logo" height="40">
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="flex-grow-1 d-flex">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="list-group list-group-flush">
+                    <a href="#preview-tab" class="list-group-item list-group-item-action d-flex align-items-center" data-bs-toggle="tab" role="tab">
+                        <span class="me-2">☰</span> Preview
+                    </a>
+                    <a href="#camera-tab" class="list-group-item list-group-item-action active d-flex align-items-center" data-bs-toggle="tab" role="tab">
+                        <span class="me-2">📷</span> Camera
+                    </a>
+                    <a href="#wireless-tab" class="list-group-item list-group-item-action d-flex align-items-center" data-bs-toggle="tab" role="tab">
+                        <span class="me-2">📶</span> Wireless
+                    </a>
+                    <a href="#telemetry-tab" class="list-group-item list-group-item-action d-flex align-items-center" data-bs-toggle="tab" role="tab">
+                        <span class="me-2">⚙</span> Telemetry
+                    </a>
+                    <a href="#firmware-tab" class="list-group-item list-group-item-action d-flex align-items-center" data-bs-toggle="tab" role="tab">
+                        <span class="me-2">⚙</span> Firmware
+                    </a>
+                </div>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="content-wrapper flex-grow-1 p-4">
+                <div class="tab-content">
+                    <!-- Preview Tab -->
+                    <div class="tab-pane fade" id="preview-tab" role="tabpanel">
+                        <!-- Preview content would go here -->
+                    </div>
+
+                    <!-- Camera Tab -->
+                    <div class="tab-pane fade show active" id="camera-tab" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="frames">Frames</label>
+                                    <select class="form-select" id="frames" style="width: 200px; float: right;">
+                                        <option value="25">25</option>
+                                        <option value="30" selected>30</option>
+                                        <option value="50">50</option>
+                                        <option value="60">60</option>
+                                    </select>
+                                    <div style="clear: both;"></div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="bitrate">Bitrate</label>
+                                    <select class="form-select" id="bitrate" style="width: 200px; float: right;">
+                                        <option value="512">512</option>
+                                        <option value="768">768</option>
+                                        <option value="1024" selected>1024</option>
+                                        <option value="2048">2048</option>
+                                        <option value="4096">4096</option>
+                                    </select>
+                                    <div style="clear: both;"></div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="record">Record</label>
+                                    <div class="form-check form-switch" style="float: right;">
+                                        <input class="form-check-input" type="checkbox" id="record">
+                                    </div>
+                                    <div style="clear: both;"></div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="audio">Audio</label>
+                                    <div class="form-check form-switch" style="float: right;">
+                                        <input class="form-check-input" type="checkbox" id="audio">
+                                    </div>
+                                    <div style="clear: both;"></div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="sample">Sample</label>
+                                    <select class="form-select" id="sample" style="width: 200px; float: right;">
+                                        <option value="4000">4000</option>
+                                        <option value="8000" selected>8000</option>
+                                        <option value="16000">16000</option>
+                                        <option value="22050">22050</option>
+                                        <option value="44100">44100</option>
+                                    </select>
+                                    <div style="clear: both;"></div>
+                                </div>
+                                
+                                <div class="text-center mt-4">
+                                    <button class="btn" id="camera-save">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wireless Tab -->
+                    <div class="tab-pane fade" id="wireless-tab" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label>Channel</label>
+                                    <select class="form-select" id="channel" style="width: 200px; float: right;">
+                                        <option value="100">Channel 100 - 5500</option>
+                                        <option value="104">Channel 104 - 5520</option>
+                                        <option value="108" selected>Channel 108 - 5540</option>
+                                        <option value="112">Channel 112 - 5560</option>
+                                        <option value="116">Channel 116 - 5580</option>
+                                    </select>
+                                    <div style="clear: both;"></div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label>Power</label>
+                                    <span style="float: right; margin-bottom: 10px;">45</span>
+                                    <div style="clear: both;"></div>
+                                    
+                                    <input type="range" class="form-range" id="power" min="0" max="100" value="45">
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="stbc" checked>
+                                        </div>
+                                        <label class="ms-2">STBC Enabled</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="form-check form-switch">
+                                            <input class="form-check-input" type="checkbox" id="ldpc" checked>
+                                        </div>
+                                        <label class="ms-2">LDPC Enabled</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="text-center mt-4">
+                                    <button class="btn" id="wireless-save">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other tabs content -->
+                    <div class="tab-pane fade" id="telemetry-tab" role="tabpanel">
+                        <!-- Telemetry content -->
+                    </div>
+
+                    <div class="tab-pane fade" id="firmware-tab" role="tabpanel">
+                        <!-- Firmware content -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- API Service -->
+    <script src="js/api-service.js"></script>
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

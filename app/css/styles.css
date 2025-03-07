@@ -1,0 +1,129 @@
+/* Main Layout */
+body {
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 160px;
+    background-color: #e6e6e6;
+    border-right: 1px solid #d9d9d9;
+}
+
+.sidebar .list-group-item {
+    border-radius: 0;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 1px solid #d9d9d9;
+    padding: 0.75rem 1rem;
+    background-color: #e6e6e6;
+    color: #333;
+}
+
+.sidebar .list-group-item.active {
+    background-color: #4a76ff;
+    color: white;
+    border-color: #4a76ff;
+}
+
+/* Content area */
+.content-wrapper {
+    background-color: #ffffff;
+}
+
+/* Form elements */
+.form-select, .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 0.5rem;
+    background-color: white;
+}
+
+/* Form group spacing */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Labels alignment */
+label {
+    display: inline-block;
+    min-width: 120px;
+}
+
+/* Toggle Switches */
+.form-check-input {
+    background-color: #ccc;
+    border-color: #ccc;
+}
+
+.form-check-input:checked {
+    background-color: #4a76ff;
+    border-color: #4a76ff;
+}
+
+/* Range input styling */
+.form-range::-webkit-slider-thumb {
+    background: #4a76ff;
+}
+
+.form-range::-moz-range-thumb {
+    background: #4a76ff;
+}
+
+/* Save button styling to match the screenshot */
+#camera-save, #wireless-save {
+    background-color: #666;
+    border-color: #666;
+    border-radius: 4px;
+    color: white;
+    font-weight: normal;
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+
+#camera-save:hover, #wireless-save:hover {
+    background-color: #555;
+    border-color: #555;
+}
+
+/* Fix the content layout to match screenshot */
+.tab-pane {
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-pane > div {
+    margin-bottom: 1rem;
+}
+
+.tab-pane label {
+    font-weight: normal;
+    color: #333;
+}
+
+/* Fix select boxes */
+.form-select {
+    background-color: white;
+    color: #333;
+    border-color: #ccc;
+}
+
+/* Custom toggle switch styling to match the screenshot */
+.form-switch .form-check-input {
+    width: 3em;
+    height: 1.5em;
+    margin-top: 0;
+}
